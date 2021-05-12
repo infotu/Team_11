@@ -7,14 +7,12 @@ import android.view.View
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.justgo.DestinationsActivity
+import com.example.justgo.*
 import com.example.justgo.Entitys.TemplateTripinfo
 import com.example.justgo.Entitys.Trip
 import com.example.justgo.Entitys.TripDates
-import com.example.justgo.FoodsActivity
 import com.example.justgo.Logic.DestinationManager
 import com.example.justgo.Logic.TripManager
-import com.example.justgo.R
 import com.example.justgo.TimeLine.TimeLine
 import java.io.Serializable
 
@@ -61,6 +59,11 @@ class ActivitySingleTrip : AppCompatActivity() {
 
             else if (element == "Foods") {
                 val intent = Intent(this, FoodsActivity::class.java)
+                intent.putExtra("trip", trip)
+                this.startActivity(intent)
+            }
+            else if (element == "Activities") {
+                val intent = Intent(this, ActivitiesActivity::class.java)
                 intent.putExtra("trip", trip)
                 this.startActivity(intent)
             }

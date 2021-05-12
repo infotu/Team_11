@@ -9,9 +9,14 @@ class Trip(name:String,tripType: TripType) : Serializable {
     var nameofTrip:String = name
     var tripType:TripType = tripType
     var foods: ArrayList<Food> = ArrayList()
+    var activities: ArrayList<Activity> = ArrayList()
 
     fun addFood(foodName: String, location: String, foodType: FoodType){
         foods.add(Food(foodName, location, foodType))
+    }
+
+    fun addActivity(activityName: String, description : String){
+        activities.add(Activity(activityName, description))
     }
 
     fun getFood(foodType: FoodType): ArrayList<Food>{

@@ -11,7 +11,7 @@
     <string name="add_date">установить дату</string>
 
     <string name="addFood_topic">добавить еду</string>
-    <string name="foodName_textView">название:</string>
+    <string name="Name_textView">название:</string>
     <string name="foodLocation_textView">место расположения:</string>
     <string name="foodType_textView">тип:</string>
     <string name="food_topic">еду</string>
@@ -33,4 +33,8 @@
     <string name="txtfield_name">Имя: </string>
     <string name="title_activity_destinations">карта</string>
     <string name="txtfield_dest">Направления</string>
+    <string name="activity_topic">Деятельность</string>
+    <string name="addActivity_topic">Добавить активность</string>
+    <string name="activityDescription_textView">Описание:</string>
+
 </resources>

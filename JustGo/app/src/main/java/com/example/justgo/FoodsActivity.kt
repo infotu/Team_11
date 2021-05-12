@@ -26,7 +26,7 @@ class FoodsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_foods)
 
         trip = intent.getSerializableExtra("trip") as Trip
-        foodListView = findViewById(R.id.food_listview)
+        foodListView = findViewById(R.id.activity_listview)
         val breakfast_foods = trip.getFood(FoodType.breakfast)
         val arrayAdapter: ArrayAdapter<Food>
         arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, breakfast_foods)
