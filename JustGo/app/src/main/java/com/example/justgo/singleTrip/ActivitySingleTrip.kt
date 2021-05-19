@@ -11,7 +11,7 @@ import com.example.justgo.*
 import com.example.justgo.Entitys.TemplateTripinfo
 import com.example.justgo.Entitys.Trip
 import com.example.justgo.Entitys.TripDates
-import com.example.justgo.Logic.DestinationManager
+import com.example.justgo.Entitys.TripFood
 import com.example.justgo.FoodsActivity
 import com.example.justgo.Logic.DestinationsRestCallManager
 import com.example.justgo.Logic.TripManager
@@ -43,10 +43,6 @@ class ActivitySingleTrip : AppCompatActivity() {
         trip = TripManager.getTripbyName(trip.nameofTrip).first()
         tripinfonames = trip.getTripInformationLNameist()
         listView.adapter = TripFeatureAdapter(this, tripinfonames)
-
-
-
-
 
         // if you click on "Locations" --> the locations list view and google maps open
         listView.setOnItemClickListener { parent, view, position, id ->
@@ -101,6 +97,9 @@ class ActivitySingleTrip : AppCompatActivity() {
                     val result = data.getSerializableExtra("added_field") as String
                     if (result == "Dates"){
                         trip.addTripInformation(TripDates(result))
+                    }
+                    else if (result == "Foods"){
+                        trip.addTripInformation(TripFood(result))
                     }
                     else{
                         trip.addTripInformation(TemplateTripinfo(result))
