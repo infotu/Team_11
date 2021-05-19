@@ -37,4 +37,8 @@
     <string name="addActivity_topic">Добавить активность</string>
     <string name="activityDescription_textView">Описание:</string>
 
+
+    <string name="pictures_and_videos_topic">Фотографии и видео</string>
+    <string name="pictures_and_videos_button_before">Перед</string>
+    <string name="pictures_and_videos_button_from">Из</string>
 </resources>

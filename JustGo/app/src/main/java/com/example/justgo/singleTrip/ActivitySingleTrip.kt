@@ -12,7 +12,11 @@ import com.example.justgo.Entitys.TemplateTripinfo
 import com.example.justgo.Entitys.Trip
 import com.example.justgo.Entitys.TripDates
 import com.example.justgo.Logic.DestinationManager
+import com.example.justgo.FoodsActivity
+import com.example.justgo.Logic.DestinationsRestCallManager
 import com.example.justgo.Logic.TripManager
+import com.example.justgo.PhotosAndVideosActivity
+import com.example.justgo.R
 import com.example.justgo.TimeLine.TimeLine
 import java.io.Serializable
 
@@ -46,8 +50,8 @@ class ActivitySingleTrip : AppCompatActivity() {
 
             if(element == "Locations")
             {
-                DestinationManager.changeActualOpenTrip(trip.nameofTrip)
-                val intent = Intent(this, DestinationsActivity::class.java).apply {}
+                val intent = Intent(this, DestinationsActivity::class.java)
+                intent.putExtra("trip",trip)
                 startActivity(intent)
             }
 
@@ -64,6 +68,12 @@ class ActivitySingleTrip : AppCompatActivity() {
             }
             else if (element == "Activities") {
                 val intent = Intent(this, ActivitiesActivity::class.java)
+                intent.putExtra("trip", trip)
+                this.startActivity(intent)
+            }
+
+            else if (element == "Photos and Videos") {
+                val intent = Intent(this, PhotosAndVideosActivity::class.java)
                 intent.putExtra("trip", trip)
                 this.startActivity(intent)
             }

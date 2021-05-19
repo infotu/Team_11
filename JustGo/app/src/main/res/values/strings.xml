@@ -10,7 +10,7 @@
     <string name="add_date">Add Date</string>
 
     <string name="addFood_topic">Add Food</string>
-    <string name="Name_textView">Name:</string>
+    <string name="foodName_textView">Name:</string>
     <string name="foodLocation_textView">Location:</string>
     <string name="foodType_textView">Type:</string>
     <string name="food_topic">Food</string>
@@ -35,4 +35,8 @@
     <string name="activity_topic">Activities</string>
     <string name="addActivity_topic">Add Activity</string>
     <string name="activityDescription_textView">Description:</string>
+
+    <string name="pictures_and_videos_topic">Pictures and Videos</string>
+    <string name="pictures_and_videos_button_before">Before</string>
+    <string name="pictures_and_videos_button_from">From</string>
 </resources>
