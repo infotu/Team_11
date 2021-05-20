@@ -92,13 +92,12 @@ class PictureVideoActivity : AppCompatActivity() {
             }
         }
 
-        fromButton.setBackgroundColor(Color.BLUE)
+        switchPreview()
         beforeButton.setOnClickListener {
             selectedType = PictureVideoType.taken_before_trip
             switchPreview()
         }
 
-        beforeButton.setBackgroundColor(Color.BLUE)
         fromButton.setOnClickListener {
             selectedType = PictureVideoType.taken_during_trip
             switchPreview()
@@ -108,12 +107,11 @@ class PictureVideoActivity : AppCompatActivity() {
             openGalleryForImage()
         }
 
-        backButton.visibility = View.GONE
+        endPreview()
         backButton.setOnClickListener {
             endPreview()
         }
 
-        deleteButton.visibility = View.GONE
         deleteButton.setOnClickListener {
             val pathOfCurrentUri = currentShownURI?.path
             val currentShownUriFile : File = File("", pathOfCurrentUri)

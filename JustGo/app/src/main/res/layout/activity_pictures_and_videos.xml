@@ -84,23 +84,24 @@
         android:id="@+id/preview_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="3dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pictures_and_videos_before_button"
+        app:layout_constraintTop_toBottomOf="@id/pictures_and_videos_back_button"
         tools:srcCompat="@tools:sample/backgrounds/scenic"
-        android:visibility="gone"
-        android:background="#000000"
-        android:padding="3dp"/>
+        android:scaleType="fitCenter"/>
 
     <VideoView
         android:id="@+id/preview_videoView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/pictures_and_videos_back_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/pictures_and_videos_before_button"
+        app:layout_constraintTop_toTopOf="parent"
         android:visibility="gone"
         android:background="#000000"
         android:padding="3dp"/>
