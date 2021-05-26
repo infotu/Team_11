@@ -24,6 +24,7 @@
         <activity android:name=".MainActivity2" />
         <activity android:name=".AddNewFoodActivity" />
         <activity android:name=".PhotosAndVideosActivity"></activity>
+        <activity android:name=".PictureVideoActivity"></activity>
         <activity android:name=".AddNewFoodActivity" />
         <activity android:name=".FoodsActivity" />
         <activity android:name=".AddNewDestination" />
