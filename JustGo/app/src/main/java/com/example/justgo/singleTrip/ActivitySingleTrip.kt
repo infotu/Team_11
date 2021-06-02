@@ -103,9 +103,12 @@ class ActivitySingleTrip : AppCompatActivity() {
                     else if (result == "Foods"){
                         trip.addTripInformation(TripFood(result))
                     }
+
                     else if(result == "Pictures and Videos"){
                         trip.addTripInformation(PictureVideoList())
                     }
+                    else if (result == "Foods"){
+                        trip.addTripInformation(TripFood(result))                    }
                     else{
                         trip.addTripInformation(TemplateTripinfo(result))
                     }

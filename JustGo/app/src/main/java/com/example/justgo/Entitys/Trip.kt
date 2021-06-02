@@ -31,6 +31,39 @@ class Trip(name:String,tripType: TripType) : Serializable {
             if(it._foodType == foodType){
                 returnList.add(it)
             }
+    fun addFood(foodName: String, location: String, foodType: FoodType){
+        foods.add(Food(foodName, location, foodType))
+    }
+
+    fun getFood(foodType: FoodType): ArrayList<Food>{
+        var returnList: ArrayList<Food> = ArrayList()
+        println("testtesttest")
+        foods.forEach {
+            println(it.toString())
+            if(it._foodType == foodType){
+                returnList.add(it)
+            }
+
+    fun addPictureVideo(pictureOrVideo: Uri, type: PictureVideoType){
+        if(type == PictureVideoType.taken_before_trip)
+        {
+            picturesAndVideosBefore.add(pictureOrVideo)
+        }
+        else
+        {
+            picturesAndVideosFrom.add(pictureOrVideo)
+        }
+    }
+
+    fun getPicturesVideosList(beforeOrFromType: PictureVideoType): ArrayList<Uri>{
+        var returnList: ArrayList<Uri> = ArrayList()
+        if(beforeOrFromType == PictureVideoType.taken_before_trip)
+        {
+            returnList = picturesAndVideosBefore
+        }
+        else
+        {
+            returnList = picturesAndVideosFrom
         }
         return returnList
     }
