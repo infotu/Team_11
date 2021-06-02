@@ -7,13 +7,12 @@ import android.view.View
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.justgo.DestinationsActivity
+import com.example.justgo.*
 import com.example.justgo.Entitys.PictureVideoList
 import com.example.justgo.Entitys.TemplateTripinfo
 import com.example.justgo.Entitys.Trip
 import com.example.justgo.Entitys.TripDates
 import com.example.justgo.Entitys.TripFood
-import com.example.justgo.FoodsActivity
 import com.example.justgo.Logic.DestinationsRestCallManager
 import com.example.justgo.*
 import com.example.justgo.Entitys.*
@@ -44,6 +43,10 @@ class ActivitySingleTrip : AppCompatActivity() {
         trip = TripManager.getTripbyName(trip.nameofTrip).first()
         tripinfonames = trip.getTripInformationLNameist()
         listView.adapter = TripFeatureAdapter(this, tripinfonames)
+
+
+
+
 
 
         // if you click on "Locations" --> the locations list view and google maps open

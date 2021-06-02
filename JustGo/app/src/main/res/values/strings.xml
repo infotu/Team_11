@@ -10,7 +10,7 @@
     <string name="add_date">Add Date</string>
 
     <string name="addFood_topic">Add Food</string>
-    <string name="foodName_textView">Name:</string>
+    <string name="Name_textView">Name:</string>
     <string name="foodLocation_textView">Location:</string>
     <string name="foodType_textView">Type:</string>
     <string name="food_topic">Food</string>

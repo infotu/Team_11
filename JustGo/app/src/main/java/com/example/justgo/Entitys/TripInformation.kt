@@ -102,3 +102,13 @@ class TripFood(name : String) : TripInformation(name, value=""){
         return returnList
     }
 }
+
+
+class TripActivity (activityName: String, description: String, image : Uri?) :
+    TripInformation(activityName, value="") {
+    public var activities : MutableList<Activity> = mutableListOf()
+
+    fun addActivity(activityName: String, description : String, image : Uri?){
+        activities.add(Activity(activityName, description, image))
+    }
+}

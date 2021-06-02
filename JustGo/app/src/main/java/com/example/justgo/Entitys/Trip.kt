@@ -1,5 +1,6 @@
 package com.example.justgo.Entitys
 
+import android.net.Uri
 import java.io.Serializable
 
 class Trip(name:String,tripType: TripType) : Serializable {
@@ -9,7 +10,7 @@ class Trip(name:String,tripType: TripType) : Serializable {
     var nameofTrip:String = name
     var tripType:TripType = tripType
     var foods: ArrayList<Food> = ArrayList()
-    var activities: ArrayList<Activity> = ArrayList()
+    lateinit var activities: TripActivity
 
     var picturesAndVideosBefore: ArrayList<Uri> = ArrayList()
     var picturesAndVideosFrom: ArrayList<Uri> = ArrayList()
@@ -19,31 +20,18 @@ class Trip(name:String,tripType: TripType) : Serializable {
         foods.add(Food(foodName, location, foodType))
     }
 
-    fun addActivity(activityName: String, description : String){
-        activities.add(Activity(activityName, description))
-    }
 
-    fun getFood(foodType: FoodType): ArrayList<Food>{
+    fun getFood(foodType: FoodType): ArrayList<Food> {
         var returnList: ArrayList<Food> = ArrayList()
         println("testtesttest")
         foods.forEach {
             println(it.toString())
-            if(it._foodType == foodType){
+            if (it._foodType == foodType) {
                 returnList.add(it)
             }
-    fun addFood(foodName: String, location: String, foodType: FoodType){
-        foods.add(Food(foodName, location, foodType))
+        }
+        return returnList
     }
-
-    fun getFood(foodType: FoodType): ArrayList<Food>{
-        var returnList: ArrayList<Food> = ArrayList()
-        println("testtesttest")
-        foods.forEach {
-            println(it.toString())
-            if(it._foodType == foodType){
-                returnList.add(it)
-            }
-
     fun addPictureVideo(pictureOrVideo: Uri, type: PictureVideoType){
         if(type == PictureVideoType.taken_before_trip)
         {
@@ -88,10 +76,10 @@ class Trip(name:String,tripType: TripType) : Serializable {
         }
         return tripInfoNames
     }
-
+/*
     override fun toString(): String {
         return "$nameofTrip"
-    }
+    }*/
 
     fun addDestination(destination: Destination) {
         /*var bool: Boolean = false

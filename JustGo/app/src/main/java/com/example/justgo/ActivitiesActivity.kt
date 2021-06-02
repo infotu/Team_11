@@ -25,11 +25,25 @@ class ActivitiesActivity : AppCompatActivity() {
 
         trip = intent.getSerializableExtra("trip") as Trip
         activityListView = findViewById(R.id.activity_listview)
-        val activities = trip.activities
+        val activities = trip.activities.activities
+
+        val titles : Array<String> = emptyArray()
+        val description : Array<String> = emptyArray()
+        val imageId : Array<Int> = emptyArray()
+
+        var index : Int = 0
+        for (i in activities) {
+            titles[index] = i._acitivityName
+            description[index] = i._description
+            imageId[index] = i._image.toString().toInt()
+        }
+        val myListAdapter = CustomAdapter(this, titles, description, imageId, activities)
+        activityListView.adapter = myListAdapter
+        /*
         val arrayAdapter: ArrayAdapter<Activity>
         arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, activities)
         activityListView.adapter = arrayAdapter
-
+        */
 
         addActivityButton = findViewById(R.id.add_activity_button)
         addActivityButton.setOnClickListener {

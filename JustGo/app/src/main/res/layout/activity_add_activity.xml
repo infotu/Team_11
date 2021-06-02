@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_picture_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/addActivity_topic"
@@ -41,15 +40,16 @@
         app:layout_constraintStart_toEndOf="@+id/activityName_textView"
         app:layout_constraintTop_toTopOf="@+id/activityName_textView" />
 
-    <EditText android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/activity_description_textView"
-        app:layout_constraintEnd_toEndOf="parent"
+    <EditText
         android:id="@+id/activityDescription_EditText"
-        app:layout_constraintStart_toEndOf="@+id/activity_description_textView"
-        android:inputType="textPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
-        app:layout_constraintHorizontal_bias="0.513"/>
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/activity_description_textView"
+        app:layout_constraintTop_toTopOf="@+id/activity_description_textView" />
 
     <TextView
         android:id="@+id/activity_description_textView"
@@ -63,28 +63,40 @@
         app:layout_constraintTop_toBottomOf="@+id/activityName_textView" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/saveActivity_floatActionButton"
-        app:srcCompat="@android:drawable/ic_menu_save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="visible"
-        android:clickable="true"
-        android:background="@android:drawable/ic_menu_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp"/>
+        android:background="@android:drawable/ic_menu_save"
+        android:clickable="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_save" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/discardActivity_floatActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        app:srcCompat="@android:drawable/ic_delete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="visible"
+        android:layout_marginBottom="32dp"
         android:clickable="true"
-        android:layout_marginBottom="32dp"/>
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <Button
+        android:id="@+id/picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Add picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_description_textView"
+        app:layout_constraintVertical_bias="0.002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
