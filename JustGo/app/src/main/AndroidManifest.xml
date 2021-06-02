@@ -25,6 +25,9 @@
         <activity android:name=".AddNewFoodActivity" />
         <activity android:name=".PhotosAndVideosActivity"></activity>
         <activity android:name=".PictureVideoActivity"></activity>
+        <activity android:name=".AddNewCoTravellerActivity"></activity>
+        <activity android:name=".CoTravellerActivity" />
+        <activity android:name=".PictureVideoActivity" />
         <activity android:name=".AddNewFoodActivity" />
         <activity android:name=".FoodsActivity" />
         <activity android:name=".AddNewDestination" />

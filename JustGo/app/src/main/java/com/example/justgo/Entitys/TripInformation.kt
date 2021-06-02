@@ -1,6 +1,5 @@
 package com.example.justgo.Entitys
 
-import android.graphics.Picture
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -15,6 +14,17 @@ abstract class TripInformation(name:String, value:Any) : Serializable{
 class TripDates(name : String) : TripInformation(name, value=""){
     @RequiresApi(Build.VERSION_CODES.O)
     public var dates : MutableMap<LocalDateTime, String> = mutableMapOf()
+}
+
+class CoTravellersList() : TripInformation("Co-Travellers", ""){
+    var coTravellersList : ArrayList<CoTraveller> = ArrayList()
+
+    fun addCoTraveller(coTraveller: CoTraveller){
+        coTravellersList.add(coTraveller)
+    }
+    fun deleteCoTraveller(coTraveller: CoTraveller){
+        coTravellersList.remove(coTraveller)
+    }
 }
 
 class PictureVideoList() : TripInformation("Pictures and Videos", ""){

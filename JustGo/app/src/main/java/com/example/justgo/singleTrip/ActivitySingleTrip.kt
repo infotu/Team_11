@@ -15,9 +15,9 @@ import com.example.justgo.Entitys.TripDates
 import com.example.justgo.Entitys.TripFood
 import com.example.justgo.FoodsActivity
 import com.example.justgo.Logic.DestinationsRestCallManager
+import com.example.justgo.*
+import com.example.justgo.Entitys.*
 import com.example.justgo.Logic.TripManager
-import com.example.justgo.PictureVideoActivity
-import com.example.justgo.R
 import com.example.justgo.TimeLine.TimeLine
 import java.io.Serializable
 
@@ -79,6 +79,12 @@ class ActivitySingleTrip : AppCompatActivity() {
                 intent.putExtra("trip", trip)
                 this.startActivity(intent)
             }
+
+            else if (element == "Co-Travellers") {
+                val intent = Intent(this, CoTravellerActivity::class.java)
+                intent.putExtra("trip", trip)
+                this.startActivity(intent)
+            }
         }
 
     }
@@ -109,6 +115,9 @@ class ActivitySingleTrip : AppCompatActivity() {
                     }
                     else if (result == "Foods"){
                         trip.addTripInformation(TripFood(result))                    }
+                    else if(result == "Co-Travellers"){
+                        trip.addTripInformation(CoTravellersList())
+                    }
                     else{
                         trip.addTripInformation(TemplateTripinfo(result))
                     }
