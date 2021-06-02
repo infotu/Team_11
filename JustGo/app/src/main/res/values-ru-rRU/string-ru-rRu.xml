@@ -10,6 +10,14 @@
     <string name="add_item">добавить элемент</string>
     <string name="add_date">установить дату</string>
 
+    <string name="addFood_topic">добавить еду</string>
+    <string name="Name_textView">название:</string>
+    <string name="foodLocation_textView">место расположения:</string>
+    <string name="foodType_textView">тип:</string>
+    <string name="food_topic">еду</string>
+    <string name="breakfast_button">завтрак</string>
+    <string name="lunch_dinner_button">обед</string>
+
     <string-array name="dropdown_string_array">
         <item>Сортировать по...</item>
         <item>название поездки</item>
@@ -25,4 +33,22 @@
     <string name="txtfield_name">Имя: </string>
     <string name="title_activity_destinations">карта</string>
     <string name="txtfield_dest">Направления</string>
+    <string name="activity_topic">Деятельность</string>
+    <string name="addActivity_topic">Добавить активность</string>
+    <string name="activityDescription_textView">Описание:</string>
+
+
+    <string name="pictures_and_videos_topic">Фотографии и видео</string>
+    <string name="pictures_and_videos_button_before">Перед</string>
+    <string name="pictures_and_videos_button_from">Из</string>
+    <string name="pictures_and_videos_button_back">назад</string>
+    <string name="pictures_and_videos_button_delete">Удалить</string>
+
+    <string name="co_travellers_text_view">Путешественники</string>
+    <string name="add_new_co_travellers_topic">Новый попутчик</string>
+    <string name="add_new_co_travellers_name">Имя: </string>
+
+    <string name="name_heading">название:</string>
+    <string name="cost_heading">траты:</string>
+    <string name="tasks_heading">задачи:</string>
 </resources>
