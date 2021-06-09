@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".InitializeComponents"
@@ -18,7 +20,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JustGo">
-        <activity android:name=".AddNewDestination"></activity>
+        <activity android:name=".AddNewCostActivity"></activity>
+        <activity android:name=".CostsActivity" />
+        <activity android:name=".AddNewCoTravellerActivity" />
+        <activity android:name=".CoTravellerActivity" />
+        <activity android:name=".PictureVideoActivity" />
+        <activity android:name=".Food.AddNewFoodActivity" />
+        <activity android:name=".Food.FoodsActivity" />
+        <activity android:name=".AddNewDestination" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -34,15 +43,17 @@
         <activity
             android:name=".DestinationsActivity"
             android:label="@string/title_activity_destinations" />
-        <activity android:name=".TimeLine.TimeLine"/>
-        <activity android:name=".TimeLine.AddDate"/>
+        <activity android:name=".TimeLine.TimeLine" />
+        <activity android:name=".TimeLine.AddDate" />
         <activity android:name=".singleTrip.AddFieldActivity" />
         <activity
             android:name=".singleTrip.ActivitySingleTrip"
             android:label="@string/title_activity_single_trip"
             android:theme="@style/Theme.JustGo.NoActionBar" />
         <activity android:name=".CreateTrip" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,13 +8,16 @@ class TripManager {
         private var trips: ArrayList<Trip> = ArrayList()
 
         fun createSampleTrips(){
-            createTrip("Barcelona",TripType.created_by_others)
-            createTrip("New York",TripType.created_by_others)
-            createTrip("Paris",TripType.created_by_others)
+            createTrip("Barcelona",TripType.Sample)
+            createTrip("New York",TripType.Sample)
+            createTrip("Paris",TripType.Sample)
         }
         fun createTrip(name:String,tripType: TripType){
             var input: String = name
             var trip: Trip = Trip(input.capitalize(),tripType)
+            trips.add(trip)
+        }
+        fun createTrip(trip:Trip){
             trips.add(trip)
         }
         fun getTripbyName(name:String): ArrayList<Trip>{
@@ -52,26 +55,13 @@ class TripManager {
             trips.sortWith(compareBy({ it.nameofTrip}))
         }
 
-        fun sortTripsBySortingInput(input:String){
-            if(input == "trip name"){
-                trips.sortWith(compareBy({ it.nameofTrip}))
-            }
-            if(input == "start date"){
-
-            }
-            if(input == "end date"){
-
-            }
-            if(input == "total cost"){
-
-            }
-            if(input == "number of destinations"){
-
-            }
-        }
-
         fun clearTrips() {
             trips.clear()
+        }
+        fun addTripsFromDatabase(tripsdb:ArrayList<Trip>){
+            tripsdb.forEach {
+                trips.add(it)
+            }
         }
     }
 }
