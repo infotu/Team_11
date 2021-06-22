@@ -11,7 +11,6 @@ import android.os.Bundle
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.example.justgo.Database.DatabaseHelper
 import com.example.justgo.MainActivity
 import com.example.justgo.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -28,8 +27,6 @@ class AddDate : AppCompatActivity() {
 
         val datelist = intent.getSerializableExtra("dates") as ArrayList<LocalDateTime>
 
-
-
         val discard :FloatingActionButton
         discard=findViewById(R.id.discard_floatActionButton)
         discard.setOnClickListener {
@@ -41,7 +38,7 @@ class AddDate : AppCompatActivity() {
         save.setOnClickListener {
             val dateString:EditText = findViewById(R.id.date_EditText)
             val timeString:EditText = findViewById(R.id.time_EditText)
-            val description:EditText = findViewById(R.id.description_EditText)
+            val description:EditText = findViewById(R.id.date_description_EditText)
             val descriptionText = description.text.toString()
             var date : LocalDateTime? = null
             try {
@@ -91,7 +88,7 @@ class AddDate : AppCompatActivity() {
                 cal.get(Calendar.DAY_OF_MONTH)).show()
         }
 
-        var timeEditText = findViewById<EditText>(R.id.time_EditText)
+        val timeEditText = findViewById<EditText>(R.id.time_EditText)
         timeEditText.setText(SimpleDateFormat("HH:mm").format(System.currentTimeMillis()))
 
         val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
